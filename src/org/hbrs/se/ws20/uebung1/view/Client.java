@@ -1,5 +1,8 @@
 package org.hbrs.se.ws20.uebung1.view;
 
+import org.hbrs.se.ws20.uebung1.control.Factory;
+import org.hbrs.se.ws20.uebung1.control.Translator;
+
 class Client {
 
 	/*
@@ -11,8 +14,9 @@ class Client {
 		// aufgerufen werden.
 		// Strenge Implementierung gegen das Interface Translator gewuenscht!
 
+		Translator germanTL = Factory.deliverGermanTranslator();
 		System.out.println("Das Ergebnis der Berechnung: " +
-				"[das Ergebnis an dieser Stelle]" );
+				germanTL.translateNumber(aNumber) );
 
 	}
 }
