@@ -60,12 +60,9 @@ public class Container {
         }
     }
 
-    public void dump() {
-        System.out.println("Member Objekte in Container:");
-        for (Member memberInList:memberList) {
-            System.out.println(memberInList.toString());
-        }
 
+    public List<Member> getCurrentList() {
+        return this.memberList;
     }
 
     public int size() {

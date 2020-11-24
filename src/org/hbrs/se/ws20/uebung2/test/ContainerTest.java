@@ -59,7 +59,7 @@ class ContainerTest {
         container.addMember(member1);
         container.addMember(member2);
 
-        container.dump();
+        //alter Test container.dump();
     }
 
 }
