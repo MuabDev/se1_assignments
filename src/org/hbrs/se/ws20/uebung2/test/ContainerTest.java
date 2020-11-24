@@ -10,12 +10,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ContainerTest {
-    Container container;
+    Container container = Container.getInstance();
     Member member1,member2,member3;
 
     @BeforeEach
     void setUp() {
-        container = container.getInstance();
 
         member1 = new ConcreteMember(25);
         member2 = new ConcreteMember(32);
