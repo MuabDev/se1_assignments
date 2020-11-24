@@ -5,7 +5,18 @@ import java.util.List;
 
 public class Container {
 
+    private static Container instance = null;
     private List<Member> memberList = new ArrayList<>();
+
+    private void Container(){
+    }
+
+    public static synchronized Container getInstance() {
+        if (instance==null){
+            instance = new Container();
+        }
+        return instance;
+    }
 
 
     public void addMember(Member member) throws ContainerException {
@@ -22,7 +33,7 @@ public class Container {
     private boolean containsMember(Member toCompare) {
         Integer ID = toCompare.getID();
         for (Member memberInList:memberList) {
-            if(memberInList.getID().equals(ID)){
+            if (memberInList.getID().equals(ID)){
                 return true;
             }
         }

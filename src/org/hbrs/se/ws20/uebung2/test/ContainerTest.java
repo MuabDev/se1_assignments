@@ -15,7 +15,7 @@ class ContainerTest {
 
     @BeforeEach
     void setUp() {
-        container = new Container();
+        container = container.getInstance();
 
         member1 = new ConcreteMember(25);
         member2 = new ConcreteMember(32);
